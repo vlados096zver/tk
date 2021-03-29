@@ -1,0 +1,168 @@
+@import 'responsive'
+
+.main-header
+	padding-top: 40px
+	padding-bottom: 75px
+	+media(sm)
+		padding-bottom: 45px
+
+	&__wrap
+		position: relative
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		+media(lgs)
+			justify-content: center
+		+media(xs)
+			flex-direction: column
+
+	&__logo
+		display: flex
+		align-items: center
+		margin-bottom: 30px
+		margin-right: auto
+		+media(lgs)
+			margin-right: 35px
+		+media(sm)
+			order: -2
+			margin-bottom: 25px
+		+media(xs)
+			margin-right: 0px
+
+	&__image
+		margin-right: 16px
+		img
+			display: block
+
+	&__title
+		font-size: 48px
+		color: #fff
+		text-transform: uppercase
+		font-weight: 200
+
+	&__menu
+		margin-right: 45px
+		margin-bottom: 30px
+		+media(lgs)
+			flex-basis: 100%
+			order: 2
+			margin-right: 0px
+		+media(sm)
+			position: relative
+			width: 100%
+			margin-bottom: 25px
+
+	&__list
+		display: flex
+		+media(lgs)
+			justify-content: center
+		li:not(:last-child)
+			margin-right: 25px
+			+media(sm)
+				margin-right: 0px
+		+media(sm)
+			display: none
+			width: calc(100% + 40px)
+			top: 100%
+			left: -20px
+			z-index: 8
+			position: absolute
+			padding-left: 45px
+			padding-top: 35px
+			padding-bottom: 10px
+			background-color: #3369C0
+			border-bottom: 1px solid #fff
+			max-height: calc(100vh - 70px)
+			overflow-y: auto
+			overflow-x: hidden
+
+	&__link
+		position: relative
+		display: inline-block
+		font-size: 18px
+		line-height: 1.2
+		color: #fff
+		text-transform: uppercase
+		font-weight: normal
+		transition: 0.3s color
+		+media(sm)
+			margin-bottom: 18px
+		&--active
+			position: relative
+			&:after
+				position: absolute
+				content: ' '
+				bottom: -15px
+				left: calc(50% - 10px)
+				width: 20px
+				height: 7px
+				background-color: #fff
+				border-radius: 5px
+				+media(sm)
+					width: 100%
+					left: 0px
+					bottom: -8px
+					height: 3px
+
+		&:hover:not(.main-header__link--active)
+			color: #183159
+
+	&__desc
+		font-size: 16px
+		color: #fff
+		text-transform: uppercase
+		font-weight: 900
+
+.mobile-wrap
+	display: none
+	align-items: center
+	justify-content: space-between
+	cursor: pointer
+	+media(sm)
+		display: flex
+		width: 100%
+		padding: 0px 30px
+
+.line-burger
+	display: block
+	position: absolute
+	top: 50%
+	left: 0
+	width: 25px
+	height: 3px
+	background-color: #fff
+	transition: 0.5s width
+	&:after,
+	&:before
+		content: ''
+		position: absolute
+		width: 25px
+		height: 3px
+		background-color: #fff
+		left: 0
+		transition: 0.5s
+	&:after
+		top: calc(100% + 5px)
+	&:before
+		bottom: calc(100% + 5px)
+
+.line-active
+	width: 0
+	&:after
+		top: 9px
+		transform: rotate(-45deg)
+		transform-origin: 0 0
+	&:before
+		bottom: 9px
+		transform: rotate(45deg)
+		transform-origin: 0 100%
+
+.main-nav__toggle
+	position: relative
+	cursor: pointer
+	display: none
+	width: 25px
+	height: 25px
+	margin-top: -5px
+	+media(sm)
+		display: block

@@ -1,0 +1,46 @@
+@import 'responsive'
+
+.info
+	&__block
+		position: relative
+
+	&__title
+		font-size: 48px
+		color: #fff
+		padding-bottom: 32px
+		font-weight: 900
+		+media(sm)
+			font-size: 36px
+
+	&__text
+		padding-bottom: 38px
+		p
+			font-size: 18px
+			line-height: 2
+			color: #fff
+
+	&__row
+		display: flex
+		justify-content: space-between
+		padding-bottom: 225px
+		+media(md)
+			flex-direction: column
+
+	&__decor
+		padding-left: 70px	
+		margin-top: 120px
+		+media(mdx)
+			padding-left: 35px	
+		+media(md)
+			margin-top: 70px
+		svg
+			display: block
+
+	&__image	
+		margin-top: -40px
+		padding-right: 115px
+		+media(md)
+			order: -1
+			margin-top: 40px
+		img
+			display: block

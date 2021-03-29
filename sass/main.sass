@@ -1,0 +1,262 @@
+@import 'responsive'
+
+body
+	margin: 0
+	padding: 0
+	overflow-x: hidden
+	color: #333333
+	background-color: #fff
+	font-size: 16px
+	line-height: 1.2
+	font-weight: normal
+	font-style: normal
+	font-family: "roboto"
+	box-sizing: border-box
+
+*
+	box-sizing: border-box
+
+*::after,
+*::before
+	box-sizing: border-box
+
+img
+	max-width: 100%
+	height: auto
+
+.svg
+	&-about
+		display: none
+
+.container
+	max-width: 1260px
+	width: 100%
+	margin: 0 auto
+	padding: 0 10px
+	&--inner
+		max-width: 1920px
+		padding: 0px
+
+	&--contacts
+		max-width: 720px
+
+	&--cost
+		max-width: 820px
+
+	&--fleet
+		max-width: 750px
+
+	&--founder
+		max-width: 740px
+
+.block
+	background-color: #3369C0
+	&--page
+		margin-bottom: 110px
+		+media(md)
+			margin-bottom: 80px
+
+	&__decor
+		position: absolute
+		right: -90px
+		bottom: -114px
+		+media(lb)
+			right: -5px
+		+media(lg)
+			right: 30px
+		+media(mdx)
+			display: none
+		&:after
+			position: absolute
+			content: ' '
+			top: -455px
+			left: 50%
+			transform: translateX(-50%)
+			width: 10px
+			height: 318px
+			border-radius: 5px
+			background-color: #fff
+
+		&--page
+			right: -200px
+			bottom: -179px
+			+media(big)
+				right: -120px
+			+media(lb)
+				right: -70px
+			+media(lg)
+				display: none
+
+	&__text
+		position: absolute
+		top: 0px
+		margin-top: 400px
+		right: 70px
+		font-size: 450px
+		line-height: 1
+		height: max-content
+		color: rgba(0, 0, 0, 0.03)
+		text-transform: uppercase
+		padding-bottom: 35px
+		writing-mode: vertical-rl
+		font-weight: 900
+		+media(max-big)
+			font-size: 310px
+		+media(desc)
+			font-size: 240px
+		+media(lg)
+			font-size: 170px
+		+media(lgm)
+			font-size: 110px
+		+media(lgs)
+			display: none
+
+		&:after
+			position: absolute
+			content: '  '
+			top: 100% 
+			left: 50%
+			transform: translateX(-50%)
+			width: 10px
+			height: 318px
+			background-color: #FF5E14
+			border-radius: 5px
+
+.wrapper
+	position: relative
+	&__content
+		position: absolute
+		left: 220px
+		margin-top: 260px
+		+media(max-big)
+			left: 120px
+		+media(desc)
+			left: 30px
+			margin-top: 360px
+		+media(lgm)
+			left: 20px
+		+media(lgs)
+			display: none
+		&:after
+			position: absolute
+			content: ' '
+			left: calc(50% - 5px)
+			top: -380px
+			width: 10px
+			height: 318px
+			background-color: #FF5E14
+			border-radius: 5px
+
+	&__box
+		writing-mode: vertical-rl
+		font-size: 96px
+		color: #FF5E14
+		white-space: nowrap
+		text-transform: uppercase
+		padding-bottom: 120px
+		font-weight: 900
+		+media(desc)
+			font-size: 50px
+		&:last-child
+			color: rgba(0, 0, 0, 0.1)
+
+.input
+	display: block
+	width: 100%
+	border: none
+	background-color: #f0f0f0
+	border-radius: 20px
+	padding: 15px
+	padding-bottom: 16px
+	&--area
+		min-height: 150px
+		resize: none
+
+	&.form-fail
+		border-color: #b00
+
+	&.form-done
+		border-color: #90ee90
+
+.subtitle
+	position: relative
+	font-size: 24px
+	line-height: 1.2
+	color: #333333
+	text-transform: uppercase
+	padding-left: 218px
+	margin-bottom: 25px
+	font-weight: 300
+	+media(md)
+		padding-left: 120px
+	+media(xs)
+		font-size: 21px
+		padding-left: 100px
+	&:after
+		position: absolute
+		content: ' '
+		top: 50%
+		left: 0px
+		transform: translateY(-50%)
+		width: 200px
+		height: 1px
+		background-color: #333
+		+media(md)
+			width: 100px	
+		+media(xs)
+			width: 80px
+
+.title
+	font-size: 64px
+	line-height: 1.2
+	color: #1b58b1
+	text-transform: uppercase
+	padding-top: 15px
+	padding-bottom: 40px
+	font-weight: 900
+	+media(mdx)
+		font-size: 42px
+	+media(sm)
+		font-size: 35px
+
+.btn
+	display: block
+	width: 100%
+	max-width: 250px
+	cursor: pointer
+	font: inherit
+	font-size: 18px
+	line-height: 1.2
+	border: none
+	outline: none
+	text-align: center
+	text-transform: uppercase
+	color: #3369C0
+	background-color: #fff
+	padding: 14px 5px
+	padding-bottom: 15px
+	border-radius: 20px
+	margin-bottom: 30px
+	font-weight: normal
+	transition: 0.3s background-color, 0.3s color, 0.3s border
+
+	&--request
+		&:hover
+			color: #fff
+			background-color: #183159
+
+	&--send
+		max-width: 350px
+		color: #fff
+		background-color: #3369C0
+		margin: 0 auto
+		font-weight: 900
+
+		&[disabled]
+			cursor: default
+			opacity: 0.5
+			text-decoration: line-through
+
+		&:not(:disabled)
+				&:hover
+					background-color: #183159

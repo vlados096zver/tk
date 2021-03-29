@@ -1,0 +1,106 @@
+@import 'responsive'
+
+.contacts
+	position: relative
+	margin-bottom: 40px
+	+media(md)
+		margin-bottom: 50px
+
+	&__title
+		font-size: 64px
+		color: #3369C0
+		text-transform: uppercase
+		text-align: center
+		padding-bottom: 90px
+		font-weight: 200
+		+media(md)
+			font-size: 45px
+			padding-bottom: 45px
+
+	&__inner
+		position: relative
+
+	&__form
+		padding-bottom: 98px
+		+media(md)
+			padding-bottom: 80px
+		+media(sm)
+			padding-bottom: 60px
+		
+	&__item
+		margin-bottom: 32px
+		&--block
+			margin-bottom: 55px
+
+	&__label
+		user-select: none
+		cursor: pointer
+		display: inline-block
+		font-size: 18px
+		line-height: 1.2
+		color: #000
+		text-transform: uppercase
+		margin-left: 25px
+		margin-bottom: 16px
+		font-weight: 900
+
+	&__wrap-error
+		margin-bottom: 5px
+
+	&__fail
+		color: #8B0000
+		text-transform: uppercase
+		padding-left: 25px
+		padding-bottom: 15px
+		font-weight: 700
+
+	&__holder
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		margin: 0 -27px
+		padding-bottom: 15px
+		+media(sm)
+			padding-bottom: 5px
+			margin: 0px
+
+	&__tel
+		font-size: 36px
+		color: #000
+		margin: 0 27px
+		margin-bottom: 30px
+		+media(md)
+			font-size: 35px
+		+media(sm)
+			font-size: 27px
+			margin-bottom: 20px
+
+	&__email
+		font-size: 24px
+		line-height: 1.5
+		color: #000
+		text-align: center
+		margin-bottom: 45px
+		+media(md)
+			font-size: 22px
+		+media(sm)
+			margin-bottom: 35px
+
+	&__address
+		font-size: 18px
+		line-height: 1.2
+		text-align: center
+		color: #000000
+		margin-bottom: 20px
+		+media(md)
+			font-size: 17px
+
+	&__block
+		position: relative
+
+	&__decor
+		position: absolute
+		top: 30px
+		left: 0px
+		+media(mdx)
+			display: none

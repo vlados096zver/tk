@@ -1,0 +1,163 @@
+@import 'responsive'
+
+.fleet
+	position: relative
+	margin-bottom: 180px
+	+media(md)
+		margin-bottom: 120px
+	+media(sm)
+		margin-bottom: 60px
+
+	&__inner
+		position: relative
+
+	&__decor
+		position: absolute
+		display: flex
+		flex-direction: column
+		align-items: center
+		top: 0px
+		left: -160px
+		margin-top: 340px
+		+media(lgxs)
+			left: -120px
+		+media(mdx)
+			display: none
+		img
+			display: block
+
+	&__title
+		font-size: 64px
+		color: #3369C0
+		text-transform: uppercase
+		text-align: center
+		padding-bottom: 72px
+		font-weight: 900
+		+media(md)
+			font-size: 45px
+			padding-bottom: 45px
+
+	&__wrap
+		+media(sm)
+			max-width: 550px
+			margin: 0 auto
+
+	&__item
+		outline: none
+
+	&__image
+		img
+			display: block
+			border-radius: 40px
+			+media(sm)
+				border-radius: 20px
+
+	&__content
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		padding: 0 25px
+		padding-top: 50px
+		+media(sm)
+			padding: 0px
+			padding-top: 40px
+
+	&__desc
+		font-size: 24px
+		line-height: 1.5
+		color: #3369C0
+		text-transform: uppercase
+		padding-bottom: 15px
+		+media(sm)
+			font-size: 19px
+			line-height: 1.2
+		&:first-child
+			padding-right: 25px
+
+	&__info
+		font-size: 70px
+		color: rgba(0, 0, 0, 0.1)
+		writing-mode: vertical-rl
+		text-transform: uppercase
+		margin-top: 195px
+		font-weight: 900
+		+media(desc)
+			font-size: 50px
+			margin-top: 100px
+		+media(lgs)
+			display: none
+
+	&__arrow
+		position: absolute
+		top: 50%
+		right: -45px
+		display: block
+		cursor: pointer
+		outline: none
+		border: none
+		background-color: transparent
+		width: 40px
+		height: 40px
+		padding: 0px
+		transition: 0.3s border
+		&:after
+			position: absolute
+			content: ' '
+			width: 20px
+			height: 20px
+			top: calc(50% - 10px)
+			left: calc(50% - 12px)
+			border-right: 2px solid #3369C0
+			border-bottom: 2px solid #3369C0
+			transform: rotate(-45deg)
+			transition: 0.3s border
+		+media(sm)
+			display: none
+		&:hover:after
+			border-color: #014659
+
+	&__dots-list
+		position: absolute
+		display: none
+		+media(sm)
+			display: flex
+			position: relative
+			justify-content: center
+			right: initial
+			margin: 0 auto
+			margin-top: 20px
+
+		button
+			display: block
+			cursor: pointer
+			position: relative
+			background-color: #fff
+			width: 20px
+			height: 20px
+			font-size: 0px
+			padding: 0px
+			border: 4px solid #fff
+			outline: none
+			margin-bottom: 30px
+			&:after
+				position: absolute
+				content: ' '
+				left: calc(50% - 5px)
+				top: calc(50% - 5px)
+				width: 10px
+				height: 10px
+				background-color: #3369C0
+				border-radius: 50%
+				transition: 0.3s background-color, 0.3s transform
+
+		li
+			&:not(:last-child)
+				+media(sm)
+					margin-right: 12px
+
+			&.slick-active	button
+				border: 4px solid #3369C0
+				border-radius: 50%
+				&:after
+					background-color: #fff
+					transform: scale(0)
