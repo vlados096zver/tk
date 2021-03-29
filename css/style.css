@@ -254,6 +254,7 @@ img {
 
 .wrapper {
 	position: relative;
+	cursor: default;
 }
 
 .wrapper__content {
@@ -366,7 +367,7 @@ img {
 
 .btn--request:hover {
 	color: #fff;
-	background-color: #183159;
+	background-color: #FF5E14;
 }
 
 .btn--send {
@@ -461,7 +462,7 @@ img {
 }
 
 .main-header__link:hover:not(.main-header__link--active) {
-	color: #183159;
+	color: #FF5E14;
 }
 
 .main-header__desc {
